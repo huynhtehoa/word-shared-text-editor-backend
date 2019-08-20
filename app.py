@@ -26,14 +26,14 @@ migrate = Migrate(app, db, compare_type=True)
 def index():
     return render_template("index.html")
 
-@app.route("/newdoc", methods=["POST"])
+@app.route(newdoc", methods=["POST"])
 def new_doc():
     data = request.get_json()
     new_doc = Document(title="", body="", updated_at=data["new_datetime"], created_at=data["new_datetime"])
     db.session.add(new_doc)
     db.session.commit()
 
-    new_doc.title = f"New Document({new_doc.id})"
+    new_doc.title = f"New Message({new_doc.id})"
     db.session.commit()
 
     return jsonify({"success": True, "doc_id": new_doc.id})
