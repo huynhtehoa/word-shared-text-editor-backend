@@ -103,7 +103,8 @@ def del_doc(id):
 
 @app.route("/search/<text>", methods=["GET"])
 def search_doc(text):
-    documents = Document.query.filter(or_(Document.title.contains(text), Document.body.contains(text))).all()
+    search_text = f"%{text}%"
+    documents = Document.query.filter(or_(Document.title.like(search_text), Document.body.like(search_text))).all()
 
     document_array = []
 
