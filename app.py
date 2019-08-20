@@ -122,3 +122,6 @@ def search_doc(text):
         return jsonify(results=document_array)
     else:
         return jsonify(results=document_array)
+
+if __name__ == '__main__':
+    app.run()
