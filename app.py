@@ -26,7 +26,7 @@ migrate = Migrate(app, db, compare_type=True)
 def index():
     return render_template("index.html")
 
-@app.route(newdoc", methods=["POST"])
+@app.route("newdoc", methods=["POST"])
 def new_doc():
     data = request.get_json()
     new_doc = Document(title="", body="", updated_at=data["new_datetime"], created_at=data["new_datetime"])
