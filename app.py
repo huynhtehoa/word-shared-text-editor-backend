@@ -54,8 +54,8 @@ def edit_doc(id):
 @app.route("/getdoc/<int:page_num>", methods=["GET"])
 def get_doc(page_num):
     all_documents = len(Document.query.all())
-    total_pages = math.ceil(all_documents/5)
-    documents = Document.query.order_by(Document.updated_at.desc()).paginate(per_page=5, page=page_num, error_out=True).items
+    total_pages = math.ceil(all_documents/10)
+    documents = Document.query.order_by(Document.updated_at.desc()).paginate(per_page=10, page=page_num, error_out=True).items
     document_array = []
     if documents:
         for document in documents:
