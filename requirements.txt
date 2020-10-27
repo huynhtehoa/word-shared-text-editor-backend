@@ -2,7 +2,7 @@ alembic==1.0.11
 asn1crypto==0.24.0
 cffi==1.12.3
 Click==7.0
-cryptography==2.7
+cryptography==3.2
 Flask==1.1.1
 Flask-Cors==3.0.8
 Flask-Migrate==2.5.2
@@ -23,7 +23,7 @@ alembic==1.0.11
 asn1crypto==0.24.0
 cffi==1.12.3
 Click==7.0
-cryptography==2.7
+cryptography==3.2
 Flask==1.1.1
 Flask-Cors==3.0.8
 Flask-Migrate==2.5.2
